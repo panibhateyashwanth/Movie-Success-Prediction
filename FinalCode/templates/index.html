@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Success Predictor</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Form styles */
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+            width: 100%;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        /* Form elements */
+        form label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        form input[type="text"],
+        form input[type="number"] {
+            width: calc(100% - 12px);
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        /* Submit button styles */
+        form input[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: #4CAF50;
+            color: #fff;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        /* Submit button hover effect */
+        form input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Predict Movie Success</h1>
+    <form action="/predict" method="post">
+        <label>Movie Name:</label>
+        <input type="text" name="name" required><br>
+        <label>Budget:</label>
+        <input type="number" name="budget" step="0.01" required><br>
+        <label>Gross:</label>
+        <input type="number" name="gross" step="0.01" required><br>
+        <label>Gross Income in Dollars:</label>
+        <input type="number" name="gross_income_dollar" step="0.01" required><br>
+        <label>Director's Name:</label>
+        <input type="text" name="director" required><br>
+        <label>Popularity Rank of Director:</label>
+        <input type="number" name="pop_rank_director" required><br>
+        <label>Producer's Name:</label>
+        <input type="text" name="producer" required><br>
+        <label>Popularity Rank of Producer:</label>
+        <input type="number" name="pop_rank_producer" required><br>
+        <label>Composer's Name:</label>
+        <input type="text" name="composer" required><br>
+        <label>Popularity Rank of Composer:</label>
+        <input type="number" name="pop_rank_composer" required><br>
+        <label>First Lead Actor's Name:</label>
+        <input type="text" name="actor_1_name" required><br>
+        <label>Popularity Rank of First Lead Actor:</label>
+        <input type="number" name="pop_rank_actor_1" required><br>
+        <label>Second Lead Actor's Name:</label>
+        <input type="text" name="actor_2_name" required><br>
+        <label>Popularity Rank of Second Lead Actor:</label>
+        <input type="number" name="pop_rank_actor_2" required><br>
+        <label>Third Lead Actor's Name:</label>
+        <input type="text" name="actor_3_name" required><br>
+        <label>Popularity Rank of Third Lead Actor:</label>
+        <input type="number" name="pop_rank_actor_3" required><br>
+        <label>Total Rank:</label>
+        <input type="number" name="total_rank" required><br>
+        <label>Total Facebook Likes:</label>
+        <input type="number" name="total_fb_like" required><br>
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Success Prediction Results</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f8f8f8;
+        }
+
+        /* Heading styles */
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* List styles */
+        ul {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 15px;
+            list-style-type: none;
+            max-width: 400px;
+            margin: auto;
+        }
+
+        li {
+            padding: 10px 0;
+            font-weight: bold;
+            color: #333;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        li:last-child {
+            border-bottom: none;
+        }
+
+        /* Link styles */
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Link hover effect */
+        a:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Prediction Results</h1>
+    <ul>
+        <li><strong>SVM:</strong> {{ predictions['SVM'] }}</li>
+        <li><strong>Logistic Regression:</strong> {{ predictions['Logistic Regression'] }}</li>
+        <li><strong>Naive Bayes:</strong> {{ predictions['Naive Bayes'] }}</li>
+    </ul>
+    <br>
+    <a href="/">Back to input form</a>
+</body>
+</html>
